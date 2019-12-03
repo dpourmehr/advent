@@ -3,7 +3,7 @@ var fs = require('fs'),
     filePath = path.join(__dirname, 'data.txt');
 
 let _ = require('lodash');
-fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
+await fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
     // console.log(data);
 
     data = data.split(',');
