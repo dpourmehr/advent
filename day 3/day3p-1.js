@@ -106,7 +106,7 @@ readFile(filePath).then(res => {
         }
     });
 
-    console.log('Smallest Distance: ' + smallest);
+    console.log('Smallest Distance: ' + smallest.distance);
 });
 
 function markLocation(x, y, line) {
@@ -123,6 +123,8 @@ function markLocation(x, y, line) {
             y: y
         });
     } else {
-        gridMap[coordinate] = [line];
+        if(line === 'line1') {
+            gridMap[coordinate] = [line];
+        }
     }
 }
